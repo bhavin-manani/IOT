@@ -1,0 +1,20 @@
+// 9.1 -  Identify the temperature with a temperature sensor using Arduino. (A)
+
+
+int Temp = A0;
+
+void setup()
+{
+  pinMode(Temp, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int value = analogRead(Temp);
+  float volt = value * (5.0 / 1023.0);
+  float Tempc = (volt - 0.5) / 0.01;
+  Serial.print(Tempc);
+  Serial.println("*c");
+  delay(1000);
+}

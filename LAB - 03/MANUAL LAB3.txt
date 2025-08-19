@@ -1,0 +1,3 @@
+digital Input 
+1. Blink an LED with Push Button using Arduino. 
+2. Blink a 2 LED using Switch. 

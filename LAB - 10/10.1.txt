@@ -1,0 +1,15 @@
+//10.1 - Perform interfacing with the DC motor using Arduino. (A)
+
+int moter = 3;
+void setup()
+{
+  pinMode(moter, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(moter, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(moter, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}

@@ -1,0 +1,26 @@
+// 7.1 - Detect a smoke with gas sensor using Arduino
+//
+int led=13;
+int gas=A0;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(gas, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int GasValue = analogRead(gas);
+  Serial.println(GasValue);
+  if(GasValue>200)
+  {
+    digitalWrite(led,HIGH);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+  }
+  
+}

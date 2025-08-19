@@ -1,0 +1,24 @@
+// Parallel
+
+float r1 = 100;
+float r2 = 200;
+float r3 = 300;
+
+void setup()
+{
+  Serial.begin(9600);
+
+  float a = (1/ r1) + (1 / r2) + (1 / r3);
+  float total = 1 / a ;
+
+  Serial.println("Total Resistance (Parallel):");
+  Serial.println(total);
+}
+
+void loop()
+{
+  
+}
+
+//Total Resistance (Parallel):
+//54.55

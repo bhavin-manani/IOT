@@ -1,0 +1,40 @@
+// 8.2 - Play a door buzzer and blink an LED with 
+//ultrasonic Sound using arduino.
+
+int LED = 13;
+int Buzz = 12;
+int Triger = 6;
+int Echo = 5;
+
+void setup()
+{
+    pinMode(LED, OUTPUT);
+    pinMode(Buzz, OUTPUT);
+    pinMode(Triger, OUTPUT);
+    pinMode(Echo, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  digitalWrite(Triger, LOW);
+  delayMicroseconds(2);
+  digitalWrite(Triger, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(Triger, LOW);
+
+  long duration = pulseIn(Echo,HIGH);
+  float distance = 0.034 * duration/2;
+  Serial.print(distance);
+  Serial.println("cm");
+  if(distance<50)
+  {
+     digitalWrite(LED, HIGH);
+     tone(Buzz,1500);
+  }
+  else
+  {
+     digitalWrite(LED, LOW);
+     noTone(Buzz);
+  }
+}

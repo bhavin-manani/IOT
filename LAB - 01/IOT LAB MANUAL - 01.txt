@@ -1,0 +1,14 @@
+Arduino IDE 
+1. Installation of Arduino IDE with interface. 
+
+2. Create a first program using Arduino IDE with Hardware Interface and without hardware 
+interface. 
+3. Write a program to perform an Arithmetic operation. 
+4. Write a program to find a number that is odd or even. 
+5. Write a program to find the maximum number from 2 numbers. 
+6. Write a program to find the maximum number from 3 numbers. 
+7. Write a program to print 1 to 10. 
+8. Write a program to sum of digits. 
+9. Write a program to print the first 50 even numbers. 
+10. Write a program to print numbers in reverse order. 
+11. Write a program to print whether number is even or odd continuously using UDF.

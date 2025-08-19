@@ -1,0 +1,25 @@
+//6.2- Fading a multiple LED using Arduinc. (A)
+void setup()
+{
+
+ pinMode(5,OUTPUT);
+}
+
+void loop()
+{
+ 
+ 
+  for(int brite=0;brite<255;brite+=100)
+  {
+  	
+     analogWrite(5, brite);
+  	 delay(50); // Wait for 1000 millisecond(s)
+  }
+  
+   for(int brite=255;brite>0;brite-=100)
+  {
+     analogWrite(5, brite);
+  	 delay(50); // Wait for 1000 millisecond(s)
+  }
+}
+

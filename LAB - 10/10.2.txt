@@ -1,0 +1,15 @@
+//10.2 -  ON/OFF bulb having 1sec of delay with actuator using Arduino. (A)
+
+int bulb = 7;
+void setup()
+{
+  pinMode(bulb, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(bulb, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(bulb, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}

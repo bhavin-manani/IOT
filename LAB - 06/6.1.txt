@@ -1,0 +1,28 @@
+//6.1 - Fading an LED using Arduino. (A)
+
+
+
+int i =0 ;
+
+
+void setup()
+{
+ int led=3;
+}
+
+void loop()
+{
+ 
+ 
+  for(int brite=0;brite<255;brite+=100)
+  {
+  	 analogWrite(3, brite);
+  	 delay(50); // Wait for 1000 millisecond(s)
+  }
+  
+    for(int brite=255;brite>0;brite-=100)
+  {
+  	 analogWrite(3, brite);
+  	 delay(50); // Wait for 1000 millisecond(s)
+  }
+}

@@ -1,0 +1,18 @@
+// 5.1 - -WAP to control led brightness with potentiometer using anuino.
+
+int LED = 3; 
+int Pot = A0; 
+int PotValue = 0;
+
+void setup()
+{
+  pinMode(LED, OUTPUT);
+  pinMode(Pot,INPUT);
+}
+
+void loop()
+{
+  PotValue = analogRead(Pot);
+  int Brightness = map(PotValue,0,1023,0,255);
+  analogWrite(LED,Brightness);
+}
